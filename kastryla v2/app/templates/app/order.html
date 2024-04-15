@@ -1,0 +1,135 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kastrylya</title>
+    <link rel="stylesheet" type="text/css" href="/static/app/content/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <a href="/"><h1>Kastrylya</h1></a>
+        <nav>
+            <ul>
+                <li><a href=about.html>Über uns</a></li>
+                <li><a href=contact.html>Kontakt</a></li>
+                <div class="theme-switcher">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <section style="flex: 1;">
+            <form action="/submit_order" method="post">
+                <label for="product-name"><h3>Produktname:</h3></label><br>
+                <input type="text" id="product-name" name="product-name" value="{{ product_name }}"><br>
+                <label for="customer-name"><h3> Name:</h3></label><br>
+                <input type="text" id="customer-name" name="customer-name"><br>
+                <label for="customer-email"><h3>Ihre E-Mail:</h3></label><br>
+                <input type="email" id="customer-email" name="customer-email"><br>
+                <input type="submit" value="Bestellung absenden">
+            </form>
+            </section>
+        </div>
+            <style>
+
+
+                .container {
+
+                    display: flex;
+                    justify-content: center; /* Центрируем контейнер */
+                    padding: 20px;
+                }
+
+                section {
+                    background-color: #fff;
+                    padding: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    transition: box-shadow 0.3s ease-in-out;
+                }
+
+                    section:hover {
+                        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+                    }
+
+                form {
+                    max-width: 340px;
+                    margin: auto;
+                }
+
+                label {
+                    display: block;
+                    margin-bottom: 15px;
+                    color: #333;
+                    font-size: 18px;
+                }
+
+                input[type="text"],
+                input[type="email"] {
+                    width: calc(100% - 20px);
+                    padding: 12px 10px;
+                    margin-bottom: 25px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    box-sizing: border-box;
+                    transition: border-color 0.3s;
+                }
+
+                    input[type="text"]:focus,
+                    input[type="email"]:focus {
+                        border-color: #5c87b2;
+                    }
+
+                input[type="submit"] {
+                    width: calc(100% - 20px);
+                    padding: 12px 10px;
+                    border: none;
+                    border-radius: 6px;
+                    background-color: #eb7a34;
+                    color: white;
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                    input[type="submit"]:hover {
+                        background-color: #eb7a34;
+                    }
+                .dark-theme {
+                    background-color: #333; /* Темный фон для всего тела */
+                    color: #fff; /* Белый цвет текста */
+                }
+
+                    .dark-theme header {
+                        background-color: #eb7a34; /* Оранжевый цвет шапки */
+                    }
+
+                    .dark-theme section {
+                        background: #444; /* Темный фон для секций */
+                    }
+
+                .dark-theme {
+                    background-color: #333; /* Dark background for the whole body */
+                    color: #fff; /* White text color */
+                }
+
+                    /* Add other dark-theme rules for specific elements if needed */
+                    .dark-theme p, .dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme h5, .dark-theme h6 {
+                        color: #fff; /* White text color for all text elements */
+                    }
+            </style>
+
+            <script src="{% static 'app/scripts/scripts.js' %}"></script>
+

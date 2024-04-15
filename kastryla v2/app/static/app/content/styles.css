@@ -1,0 +1,232 @@
+body {
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Темный фон для всего тела */
+    color: #333; /* Белый цвет текста */
+    transition: background-color 0.5s ease;
+}
+
+
+header {
+    background-color: #eb7a34; /* Оранжевый цвет шапки */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+    }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+            nav ul li a:hover {
+                color: #ddd;
+                text-shadow: 0 0 10px #fff;
+            }
+
+        nav ul li::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 0;
+            background: #ddd;
+            transition: width 0.4s ease;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        nav ul li:hover::after {
+            width: 100%;
+        }
+
+
+
+h2, h3 {
+    font-family: 'Exo 2', sans-serif;
+    color: #333;
+    text-transform: uppercase;
+}
+
+
+section {
+    display: inline-block; /* Секции в ряд */
+    margin: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: calc(33.333% - 60px); /* Ширина секций, чтобы вместить 3 в ряд */
+    vertical-align: top;
+    background: #ddd; /* Темный фон для секций */
+    color: #333; /* Белый цвет текста в секциях */
+    /* Остальные стили секции */
+}
+
+/* Центрирование секций */
+.container {
+    text-align: center;
+}
+
+.container section {
+    margin: 15px;
+}
+
+/* Медиа запросы для адаптивного дизайна */
+@media (max-width: 768px) {
+    .container section {
+        width: calc(50% - 30px); /* Для меньших экранов 2 секции в ряд */
+    }
+}
+
+@media (max-width: 480px) {
+    .container section {
+        width: calc(100% - 30px); /* Для ещё меньших экранов 1 секция в ряд */
+    }
+}
+
+header h1 {
+    float: left; /* Название магазина слева */
+    margin-left: 100px;
+}
+
+nav {
+    float: right; /* Ссылки справа */
+}
+
+/* Очистка плавающих элементов */
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.clickable-section {
+    cursor: pointer;
+}
+section img {
+    max-width: 500px; /* Максимальная ширина изображения */
+    max-height: 500px; /* Максимальная высота изображения */
+    display: block; /* Убирает лишние отступы вокруг изображения */
+    margin: 0 auto; /* Центрирует изображение внутри секции */
+}
+.price {
+    font-size: 24px; /* Увеличенный размер шрифта для цены */
+    font-weight: bold; /* Делает шрифт жирным */
+}
+/* Стили для переключателя темы */
+.switch {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    background: linear-gradient(145deg, #c4c4c4, #f0f0f0);
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.4s ease-in-out;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2196F3;
+    border-radius: 40px;
+    transition: all 0.4s ease-in-out;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 32px;
+        width: 32px;
+        left: 3px;
+        bottom: 4px;
+        background-color: #ff0;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: all 0.4s ease-in-out;
+    }
+
+input:checked + .slider {
+    background-color: #000;
+}
+
+    input:checked + .slider:before {
+        transform: translateX(40px);
+        background-color: #ff0;
+    }
+
+a {
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+    color: inherit; /* Цвет ссылки будет таким же, как у родительского элемента */
+}
+
+h1 {
+    user-select: none; /* Предотвращает выделение текста */
+}
+
+.dark-theme {
+    background-color: #333; /* Темный фон для всего тела */
+    color: #fff; /* Белый цвет текста */
+}
+
+    .dark-theme header {
+        background-color: #eb7a34; /* Оранжевый цвет шапки */
+    }
+
+    .dark-theme section {
+        background: #444; /* Темный фон для секций */
+    }
+.dark-theme {
+    background-color: #333; /* Dark background for the whole body */
+    color: #fff; /* White text color */
+}
+
+    /* Add other dark-theme rules for specific elements if needed */
+    .dark-theme p, .dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme h5, .dark-theme h6 {
+        color: #fff; /* White text color for all text elements */
+    }
+.switch input:checked + .slider:before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 0 9.79z"/></svg>');
+    /* Иконка луны для темной темы */
+}
+
+.switch input:not(:checked) + .slider:before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/></svg>');
+    /* Иконка солнца для светлой темы */
+}

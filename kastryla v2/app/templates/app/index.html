@@ -1,0 +1,74 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kastrylya</title>
+    <link rel="stylesheet" type="text/css" href="static/app/content/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Kastrylya</h1>
+
+        <nav>
+            <ul>
+                <li><a href=about.html>Über uns</a></li>
+                <li><a href=contact.html>Kontakt</a></li>
+                <div class="theme-switcher">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <!-- Ваши секции -->
+        <section class="clickable-section" onclick="window.open('CITRUS', '_self')">
+            <h2>CITRUS JUCIER ZITRUSPRESSE</h2>
+            <img src="static/app/media/photo_31_2024-03-26_19-13-34.jpg" alt="Pictures">
+
+            <p class="price">Preis: 40$</p>
+        </section>
+
+        <section class="clickable-section" onclick="window.open('MEAT_GRINDER_FLEISCHWOLF', '_self')">
+            <h2>MEAT GRINDER FLEISCHWOLF</h2>
+            <img src="static/app/media/photo_13_2024-03-26_19-13-34.jpg" alt="Pictures">
+            <p class="price">Preis: 125$</p>
+        </section>
+
+        <section class="clickable-section" onclick="window.open('NUT_TART', '_self')">
+            <h2>NUT TART</h2>
+            <img src="static/app/media/photo_20_2024-03-26_19-13-34.jpg" alt="Pictures">
+            <p class="price">Preis: 30$</p>
+        </section>
+
+        <section class="clickable-section" onclick="window.open('ZERKIENERER_CHOPPER', '_self')">
+            <h2>ZERKIENERER CHOPPER</h2>
+            <img src="static/app/media/photo_25_2024-03-26_19-13-34.jpg" alt="Pictures">
+            <p class="price">Preis: 100$</p>
+        </section>
+
+        <section class="clickable-section" onclick="window.open('JUICE_EXTRACTOR', '_self')">
+            <h2>JUICE EXTRACTOR</h2>
+            <img src="static/app/media/photo_24_2024-03-26_19-13-34.jpg" alt="Pictures">
+            <p class="price">Preis: 60$</p>
+        </section>
+
+        <section class="clickable-section" onclick="window.open('MEAT_GRINDER_FLEISHWOLF_2', '_self')">
+            <h2>MEAT GRINDER FLEISHWOLF</h2>
+            <img src="static/app/media/photo_41_2024-03-26_19-13-34.jpg" alt="Pictures">
+            <p class="price">Preis: 180$</p>
+        </section>
+    </div>
+    <script src="{% static 'app/scripts/scripts.js' %}"></script>
+
+
+</body>
+</html>

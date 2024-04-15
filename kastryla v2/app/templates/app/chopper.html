@@ -1,0 +1,89 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kastrylya</title>
+    <link rel="stylesheet" type="text/css" href="/static/app/content/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <a href="/"><h1>Kastrylya</h1></a>
+        <nav>
+            <ul>
+                <li><a href=about.html>Über uns</a></li>
+                <li><a href=contact.html>Kontakt</a></li>
+                <div class="theme-switcher">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- Секция для картинки и названия -->
+        <section style="flex: 1;">
+            <h2>ZERKIENERER CHOPPER</h2>
+            <img src="/static/app/media/photo_25_2024-03-26_19-13-34.jpg" alt="Pictures">
+            <p class="price">Preis: 100$</p>
+            <button class="order-button" onclick="orderProduct('ZERKIENERER CHOPPER')">Bestellung aufgeben</button>
+
+
+
+        </section>
+        <style>
+            .order-button {
+                background: linear-gradient(145deg, #4CAF50, #43a047); /* Gradient Green */
+                border: none;
+                color: white;
+                padding: 12px 28px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 18px;
+                margin: 6px 3px;
+                cursor: pointer;
+                border-radius: 12px; /* More rounded corners */
+                transition: transform 0.3s, box-shadow 0.3s;
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+            }
+
+                .order-button:hover, .order-button:focus {
+                    transform: translateY(-3px); /* Slight lift effect */
+                    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover/focus */
+                }
+        </style>
+        <!-- Секция для характеристик -->
+        <section class="product-info" style="flex: 1;">
+            <h2>Mini-Zerkleinerer für die elektrische Küche von Royalty Line Rl MCE-400</h2>
+            <p>Der Zerkleinerer speichert und speichert die Produkte ständig und sorgt dafür, dass er immer auf Knopfdruck verfügbar ist.</p>
+            <p>Dies kann dazu führen, dass mehr Produkte gekauft werden als ursprünglich. Das ist nicht einfach, es sei denn, Sie haben noch etwas Geld zum Ausgeben.</p>
+            <p>Volumetrische Glasschüssel 1l.</p>
+            <p>Metallgehäuse und Metallnägel müssen möglicherweise in eine andere Maschine gegeben werden.</p>
+
+            <h3>Eigenschaften:</h3>
+
+            <p>Gehäusematerial: Glas</p>
+            <p>Französisches Material: neuer Stahl</p>
+            <p>Material: Stahl, Kunststoff</p>
+            <p>Maximalwert, Wert: 300</p>
+            <p>Schüsselvolumen, l: 1</p>
+            <p>Dauer: 220–240 V</p>
+            <p>Der Download dauert maximal 2 Minuten</p>
+            <p>Verpackungsgewicht: 2.500 kg.</p>
+        </section>
+
+    </div>
+
+
+
+    <script src="{% static 'app/scripts/scripts.js' %}"></script>
+
+</body>
+</html>
